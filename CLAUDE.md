@@ -26,7 +26,3 @@ sources/          # Documents de référence (PDFs, guides officiels)
 - `sources/domain-*/` - Articles et docs officiels par domaine
 - `sources/mastering/` - Docs d'approfondissement (Skills, Sandboxing, Think Tool, etc.)
 - `sources/exam-*.md` - Guides de préparation à l'examen avec cheatsheets
-
-## NotebookLM
-
-- **NLM miroir des sources** : https://notebooklm.google.com/notebook/be0a2e4e-c257-4cc3-9abe-4fca9c75e037

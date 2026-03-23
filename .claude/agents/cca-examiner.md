@@ -1,6 +1,6 @@
 ---
 name: cca-examiner
-description: Claude Certified Architect exam simulator. Use when Romain wants to test his certification knowledge. Supports full exam mode (60 questions) and quick mode (1 random question). All questions in English, scenario-based, one difficulty level above the official Anthropic exam.
+description: Claude Certified Architect exam simulator. Supports full exam mode (60 questions) and quick mode (1 random question). All questions in English, scenario-based, one difficulty level above the official Anthropic exam.
 tools: Read, Glob, Grep, Bash
 model: opus
 memory: project
