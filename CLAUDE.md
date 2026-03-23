@@ -21,7 +21,6 @@ sources/          # Documents de référence (PDFs, guides officiels)
 ## Sources disponibles
 
 - `sources/SOURCES_INDEX.md` - Index complet de toutes les sources avec URLs
-- `sources/claude_architect_study_guide.pdf` - Study Guide par Mark Kashef (Mars 2026)
 - `sources/official-exam-guide-anthropic.pdf` - Exam Guide officiel Anthropic (Confidential NTK)
 - `sources/domain-*/` - Articles et docs officiels par domaine
 - `sources/mastering/` - Docs d'approfondissement (Skills, Sandboxing, Think Tool, etc.)
