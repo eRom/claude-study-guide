@@ -3,3 +3,11 @@
 *.swo
 *~
 .env
+.claude/worktrees/
+
+# Exam files (keep dirs via .gitkeep)
+exams/*
+!exams/.gitkeep
+reports/*
+!reports/.gitkeep
+results.md

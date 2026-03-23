@@ -2,7 +2,7 @@
 
 Everything you need to prepare for the **Claude Certified Architect -- Foundations** certification by Anthropic.
 
-26 curated documents from official Anthropic sources, a scenario-based exam simulator agent, and a progress tracker.
+26 curated documents from official Anthropic sources, a two-phase exam simulator (generate then correct), and a progress tracker.
 
 ## Exam Overview
 
@@ -29,31 +29,52 @@ cd claude-study-guide
 
 ### Take a Practice Exam
 
-Launch the exam agent:
+The exam workflow uses two agents, separating generation from correction so you can work offline at your own pace.
 
-```bash
-claude --agent cca-examiner
-```
+**Step 1 — Generate an exam**
 
-Or from within a Claude Code session, mention the agent:
+From a Claude Code session, ask to generate an exam:
 
 ```
-@cca-examiner full
+Generate a CCA exam
 ```
 
-### Two Modes
+Claude launches the `cca-generate` agent, which produces a file in `exams/YYYY-MM-DD_HHhMM_exam.md` with 60 questions and empty `Reponse:` fields.
 
-| Mode | Command | Description |
-|------|---------|-------------|
-| **Full Exam** | `full`, `exam`, `complet` | 60 questions, 4 random scenarios, results at the end, correction report |
-| **Quick** | `quick`, `rapide`, `une question` | 1 random question with immediate feedback |
+**Step 2 — Fill in your answers**
 
-### After a Full Exam
+Open the exam file in your editor and fill in each `Reponse:` field with A, B, C, or D. Take your time — recommended 120 minutes.
 
-The agent automatically generates:
+**Step 3 — Correct the exam**
 
-- **`reports/YYYY-MM-DD_HHhMM.md`** -- Detailed correction in French with sourced explanations
+Back in Claude Code, ask to correct your exam:
+
+```
+Correct my exam
+```
+
+Claude launches the `cca-correct` agent, which reads your answers and generates:
+
+- **`reports/YYYY-MM-DD_HHhMM.md`** -- Detailed correction in French with sourced explanations for each wrong answer
 - **`results.md`** -- Score tracker with per-domain breakdown and progression notes
+
+### Quick Mode
+
+For a single question with immediate feedback:
+
+```
+Launch a CCA quick question
+```
+
+Claude launches the `cca-quick` agent — one question, instant correction.
+
+### Agents
+
+| Agent | Purpose |
+|-------|---------|
+| `cca-generate` | Generates a full 60-question exam file to fill offline |
+| `cca-correct` | Corrects a completed exam file, produces report and updates tracker |
+| `cca-quick` | Single random question with immediate feedback |
 
 ## Project Structure
 
@@ -62,9 +83,12 @@ The agent automatically generates:
 |-- CLAUDE.md                    # Project context for Claude Code
 |-- results.md                   # Exam score tracker
 |-- reports/                     # Detailed correction reports
+|-- exams/                      # Generated exam files (gitignored)
 |-- .claude/
 |   `-- agents/
-|       `-- cca-examiner.md      # Exam simulator agent
+|       |-- cca-generate.md     # Exam file generator
+|       |-- cca-correct.md      # Exam corrector & scorer
+|       `-- cca-quick.md        # Single question challenge
 `-- sources/
     |-- SOURCES_INDEX.md         # Complete index with all URLs
     |-- official-exam-guide-anthropic.pdf
