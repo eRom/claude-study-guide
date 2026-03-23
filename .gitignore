@@ -3,3 +3,6 @@
 *.swo
 *~
 .env
+
+# Large PDF (53 MB) - récupérable séparément
+sources/claude_architect_study_guide.pdf
