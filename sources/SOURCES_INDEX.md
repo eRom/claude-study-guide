@@ -119,6 +119,3 @@
 ### Cookbooks (GitHub)
 - https://github.com/anthropics/anthropic-cookbook - Anthropic Cookbook
 - https://github.com/anthropics/anthropic-cookbook/tree/main/patterns/agents - Agent patterns
-
-### PDFs
-- `claude_architect_study_guide.pdf` - Study Guide par Mark Kashef (Mars 2026)
