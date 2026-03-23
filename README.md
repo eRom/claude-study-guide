@@ -2,7 +2,7 @@
 
 Everything you need to prepare for the **Claude Certified Architect -- Foundations** certification by Anthropic.
 
-26 curated documents from official Anthropic sources, a scenario-based exam simulator agent, and a progress tracker -- all designed to work inside [Claude Code](https://claude.ai/code).
+26 curated documents from official Anthropic sources, a scenario-based exam simulator agent, and a progress tracker.
 
 ## Exam Overview
 
@@ -19,11 +19,6 @@ Everything you need to prepare for the **Claude Certified Architect -- Foundatio
 - **Scenarios**: 4 randomly selected from 6 (Customer Support, Code Generation, Multi-Agent Research, Developer Productivity, CI/CD, Data Extraction)
 
 ## Quick Start
-
-### Prerequisites
-
-- [Claude Code](https://claude.ai/code) installed (`npm install -g @anthropic-ai/claude-code`)
-- An Anthropic API key configured
 
 ### Installation
 
@@ -142,10 +137,6 @@ If you're short on time, read these five first:
 ## Contributing
 
 Found a missing official resource? Open a PR adding it to the appropriate `sources/` subdirectory and update `SOURCES_INDEX.md`.
-
-## License
-
-MIT -- See [LICENSE](LICENSE).
 
 ---
 
